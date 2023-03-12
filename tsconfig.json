@@ -1,0 +1,45 @@
+// {
+//     "compilerOptions": {
+//         "module": "commonjs", //especifica que o tipo de módulo de saída deve ser o "commonjs", que é o formato de módulos usado pelo Node.js.
+//         "moduleResolution": "node", //"node" faz com que o TypeScript tente imitar a estratégia de resolução de módulos do Node.js.
+//         "pretty": true, //ativa a formatação do código de saída.
+//         "sourceMap": true, //especifica que os arquivos de mapa de código fonte devem ser gerados junto com os arquivos .js.
+//         "outDir": "./dist", //especifica a pasta onde os arquivos .js compilados serão colocados.
+//         "baseUrl": "./src", //especifica a pasta raiz do projeto.
+//         "target": "es6", ///especifica que a saída deve ser no nível de linguagem ES6, que é suportada pelo Node.js. /The output language level, Node supports ES6
+//     },
+//     "include": [
+//         "src/**/*.ts"
+//     ],
+//     "exclude": [
+//         "../node_modules"
+//     ]
+// }
+
+
+{
+    "compilerOptions": {
+        "module": "commonjs", //especifica que o tipo de módulo de saída deve ser o "commonjs", que é o formato de módulos usado pelo Node.js.
+        "moduleResolution": "node", //"node" faz com que o TypeScript tente imitar a estratégia de resolução de módulos do Node.js.
+        "pretty": true, //ativa a formatação do código de saída.
+        "sourceMap": true, //especifica que os arquivos de mapa de código fonte devem ser gerados junto com os arquivos .js.
+        "outDir": "./dist", //especifica a pasta onde os arquivos .js compilados serão colocados.
+        "baseUrl": "./src", //especifica a pasta raiz do projeto.
+        "emitDecoratorMetadata": true, //permite que os decoradores gerem metadados.
+        "experimentalDecorators": true, // permite que os decoradores sejam usados.
+        "target": "es6", ///especifica que a saída deve ser no nível de linguagem ES6, que é suportada pelo Node.js. /The output language level, Node supports ES6
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "composite": true, //permite compilar arquivos TypeScript em conjunto, em vez de compilá-los individualmente. Isso é útil se você tiver vários arquivos TypeScript que precisam ser compilados juntos, como quando você está criando uma biblioteca.
+        "declaration": true, //gera arquivos de declaração .d.ts ao lado dos arquivos .js compilados. Isso permite que outros desenvolvedores utilizem sua biblioteca TypeScript sem precisar saber a estrutura interna.
+        "declarationMap": true, //gera arquivos de mapa de declaração .d.ts.map ao lado dos arquivos de declaração. Isso permite que outros desenvolvedores naveguem através do código fonte original usando ferramentas de depuração.
+    },
+    "include": [
+        "src/**/*.ts", 
+        "*.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
